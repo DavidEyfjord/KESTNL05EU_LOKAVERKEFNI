@@ -1,0 +1,52 @@
+bash script for creating users
+	#!/bin/bash
+
+# Check if the script is being run with root privileges
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run with sudo or as root" 1>&2
+    exit 1
+fi
+
+# Function to create a user account
+create_user() {
+    full_name=$1
+    username=$2
+    email=$3
+    department=$4
+    employee_id=$5
+    
+    # Check if the username is already in use
+    if id "$username" &>/dev/null; then
+        echo "User '$username' already exists. Skipping."
+        return 1
+    fi
+    
+    # Extract first and last name
+    IFS=', ' read -r -a name_parts <<< "$full_name"
+    first_name="${name_parts[0]}"
+    last_name="${name_parts[-1]}"
+    
+    # Generate a password based on the username
+    password=$(echo "$username" | sha256sum | base64 | head -c 12)
+    
+    # Create the user with the specified details
+    useradd -m -c "$full_name" -s /bin/bash "$username"
+    echo "$username:$password" | chpasswd
+    
+    # Add additional user information
+    usermod -aG sudo "$username"  # Add user to sudo group
+    usermod -aG "$department" "$username"  # Add user to department group
+    usermod -u "$employee_id" "$username"  # Set user ID
+    
+    # Set user email (optional)
+    if [ ! -z "$email" ]; then
+        usermod -c "$email" "$username"
+    fi
+    
+    echo "User '$username' created successfully"
+}
+
+# Loop through provided user data and create user accounts
+while IFS=',' read -r full_name username _ email department employee_id; do
+    create_user "$full_name" "$username" "$email" "$department" "$employee_id"
+done <<< "$@"

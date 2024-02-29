@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Set the backup directory
+backup_dir="/path/to/backup/directory"
+
+# Create a directory with today's date to store the backup
+today=$(date +"%Y-%m-%d")
+mkdir -p "$backup_dir/$today"
+
+# Backup home directories
+rsync -avz --delete /home/ "$backup_dir/$today"
+
+# Optional: Notify via email once backup is completed
+# You'll need to replace "email@example.com" with the actual email address you want to send notifications to.
+echo "Weekly backup of home directories completed on $(date)" | mail -s "Backup Completed" email@example.com
