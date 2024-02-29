@@ -1,8 +1,1 @@
-![1 (1)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/94abdd8a-cb2d-40be-9748-b685dcb6bda7)
-![1 (2)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/93c349e4-bf5a-4448-9faf-1a3a1e542940)
-![1 (3)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/89f69349-dcd1-4ec8-b5e9-c20aa3210c6e)
-![1 (4)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/e9981407-5d11-4aae-b09b-3b71bf85cd03)
-![1 (5)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/11095f00-27e8-4666-a8b1-5ab68de3b08f)
-![1 (6)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/1d0f6274-b114-4923-8ad3-a69245a9c0ed)
-![1 (7)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/d5e1faf8-b062-4e65-b995-e2bb9fb21cc6)
-![1 (8)](https://github.com/DavidEyfjord/KESTNL05EU_LOKAVERKEFNI/assets/92379040/f567c7e7-63ca-40bb-82d1-f69f83d58e9b)
+
